@@ -5,7 +5,7 @@ This is the official repository for the following paper:
 > Junhong Gou, Siyu Sun, Jianfu Zhang, Jianlou Si, Chen Qian, Liqing Zhang  
 > Accepted by **ACM MM 2023**.
 ## Overview
-![](assets/teaser.png)
+![](assets/teaser.jpg)
 > **Absreact**
 > Virtual try-on is a critical image synthesis task that aims to transfer clothes from one image to another while preserving the details of both humans and clothes.
 > While many existing methods rely on Generative Adversarial Networks (GANs) to achieve this, flaws can still occur, particularly at high resolutions.
