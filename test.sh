@@ -1,0 +1,12 @@
+python test.py --plms --gpu_id 3 \
+--ddim_steps 100 \
+--outdir results/viton \
+--config configs/viton512.yaml \
+--dataroot /data/user/gjh/VITON-HD \
+--ckpt /data/user/gjh/models/tryon/checkpoints/viton512.ckpt \
+--n_samples 8 \
+--seed 23 \
+--scale 1 \
+--H 512 \
+--W 512 \
+--unpaired
