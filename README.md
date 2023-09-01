@@ -35,7 +35,7 @@ conda activate dci-vton
 1. Download [VITON-HD](https://github.com/shadow2496/VITON-HD) dataset
 2. Download pre-warped cloth image/mask from [Google Driver](https://drive.google.com/drive/folders/15cBiA0AoSCLSkg3ueNFWSw4IU3TdfXbO?usp=sharing) or [Baidu Cloud](https://pan.baidu.com/s/1ss8e_Fp3ZHd6Cn2JjIy-YQ?pwd=x2k9) and put it under your VITON-HD dataset
 
-After these, the folder structure should ook like this (the unpaired-cloth* only included in test directory):
+After these, the folder structure should look like this (the unpaired-cloth* only included in test directory):
 ```
 ├── VITON-HD
 |   ├── test_pairs.txt
