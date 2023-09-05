@@ -19,6 +19,7 @@ To overcome this challenge, we propose an exemplar-based inpainting approach tha
 > Experimental results on VITON-HD demonstrate the effectiveness and superiority of our method.
 ## Getting Started
 ### Installation
+#### Diffusion Model
 1. Clone the repository
 ```shell
 git clone https://github.com/bcmi/DCI-VTON-Virtual-Try-On.git
@@ -30,6 +31,16 @@ conda env create -f environment.yaml
 conda activate dci-vton
 ```
 3. Download the pretrained [vgg](https://drive.google.com/file/d/1rvow8jStPt8t2prDcSRlnf8yzXhrYeGo/view?usp=sharing) checkpoint and put it in `models/vgg/`
+#### Warping Module
+4. Clone the PF-AFN repository
+```shell
+git clone https://github.com/geyuying/PF-AFN.git
+```
+5. Move the code to the corresponding directory
+```shell
+cp -r DCI-VTON-Virtual-Try-On/warp/train/* PF-AFN/PF-AFN_train/
+cp -r DCI-VTON-Virtual-Try-On/warp/test/* PF-AFN/PF-AFN_test/
+```
 ### Data Preparation
 #### VITON-HD
 1. Download [VITON-HD](https://github.com/shadow2496/VITON-HD) dataset
@@ -59,6 +70,17 @@ After these, the folder structure should look like this (the unpaired-cloth* onl
 ### Inference
 #### VITON-HD
 Please download the pretrained model from [Google Driver](https://drive.google.com/drive/folders/11BJo59iXVu2_NknKMbN0jKtFV06HTn5K?usp=sharing) or [Baidu Cloud](https://pan.baidu.com/s/13Rp_-Fbp1NUN41q0U6S4gw?pwd=6bfg).
+###### Warping Module
+To test the warping module, first move the `warp_viton.pth` to `checkpoints` directory:
+```shell
+mv warp_viton.pth PF-AFN/PF-AFN_test/checkpoints
+```
+Then run the following command:
+```shell
+cd PF-AFN/PF-AFN_test
+sh test_VITON.sh
+```
+After inference, you can put the results in the VITON-HD for inference and training of the diffusion model. 
 ###### Diffusion Model
 To quickly test our diffusion model, run the following command:
 ```shell
@@ -79,7 +101,13 @@ or just simply run:
 ```shell
 sh test.sh
 ```
-
+### Training
+#### Warping Module
+To train the warping module, just run following commands:
+```shell
+cd PF-AFN/PF-AFN_train/
+sh train_VITON.sh
+```
 ## Acknowledgements
 Our code is heavily borrowed from [Paint-by-Example](https://github.com/Fantasy-Studio/Paint-by-Example). We also thank [PF-AFN](https://github.com/geyuying/PF-AFN), our warping module depends on it.
 ## Citation
