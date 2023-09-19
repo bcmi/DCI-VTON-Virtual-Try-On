@@ -1,0 +1,1 @@
+python -u main.py --logdir models/dci-vton --pretrained_model checkpoints/model.ckpt --base configs/viton512.yaml --scale_lr False
