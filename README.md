@@ -44,7 +44,7 @@ cp -r DCI-VTON-Virtual-Try-On/warp/test/* PF-AFN/PF-AFN_test/
 ### Data Preparation
 #### VITON-HD
 1. Download [VITON-HD](https://github.com/shadow2496/VITON-HD) dataset
-2. Download pre-warped cloth image/mask from [Google Driver](https://drive.google.com/drive/folders/15cBiA0AoSCLSkg3ueNFWSw4IU3TdfXbO?usp=sharing) or [Baidu Cloud](https://pan.baidu.com/s/1ss8e_Fp3ZHd6Cn2JjIy-YQ?pwd=x2k9) and put it under your VITON-HD dataset
+2. Download pre-warped cloth image/mask from [Google Drive](https://drive.google.com/drive/folders/15cBiA0AoSCLSkg3ueNFWSw4IU3TdfXbO?usp=sharing) or [Baidu Cloud](https://pan.baidu.com/s/1ss8e_Fp3ZHd6Cn2JjIy-YQ?pwd=x2k9) and put it under your VITON-HD dataset
 
 After these, the folder structure should look like this (the unpaired-cloth* only included in test directory):
 ```
@@ -69,7 +69,7 @@ After these, the folder structure should look like this (the unpaired-cloth* onl
 ```
 ### Inference
 #### VITON-HD
-Please download the pretrained model from [Google Driver](https://drive.google.com/drive/folders/11BJo59iXVu2_NknKMbN0jKtFV06HTn5K?usp=sharing) or [Baidu Cloud](https://pan.baidu.com/s/13Rp_-Fbp1NUN41q0U6S4gw?pwd=6bfg).
+Please download the pretrained model from [Google Drive](https://drive.google.com/drive/folders/11BJo59iXVu2_NknKMbN0jKtFV06HTn5K?usp=sharing) or [Baidu Cloud](https://pan.baidu.com/s/13Rp_-Fbp1NUN41q0U6S4gw?pwd=6bfg).
 ###### Warping Module
 To test the warping module, first move the `warp_viton.pth` to `checkpoints` directory:
 ```shell
@@ -109,9 +109,9 @@ cd PF-AFN/PF-AFN_train/
 sh train_VITON.sh
 ```
 #### Diffusion Model
-We utilize the pretrained Paint-by-Example as initialization, please download the pretrained models from [Google Driver](https://drive.google.com/file/d/15QzaTWsvZonJcXsNv-ilMRCYaQLhzR_i/view) and save the model to directory `checkpoints`. 
+We utilize the pretrained Paint-by-Example as initialization, please download the pretrained models from [Google Drive](https://drive.google.com/file/d/15QzaTWsvZonJcXsNv-ilMRCYaQLhzR_i/view) and save the model to directory `checkpoints`. 
 
-To train a new model on VITON-HD, you should fisrt modify the dataroot of VITON-HD dataset in `configs/viton512.yaml` and then use `main.py` for training. For example,
+To train a new model on VITON-HD, you should first modify the dataroot of VITON-HD dataset in `configs/viton512.yaml` and then use `main.py` for training. For example,
 ```shell
 python -u main.py \
 --logdir models/dci-vton \
