@@ -268,7 +268,7 @@ class SetupCallback(Callback):
     def on_keyboard_interrupt(self, trainer, pl_module):
         if trainer.global_rank == 0:
             print("Summoning checkpoint.")
-            if hasattr(self.config, 'lora_conifg'):
+            if hasattr(self.config, 'lora_config'):
                 ckpt_path = os.path.join(self.ckptdir, "lora_last.ckpt")
                 from lora.lora import save_lora_weight
                 save_lora_weight(trainer.model, path=ckpt_path)

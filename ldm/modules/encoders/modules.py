@@ -6,7 +6,7 @@ from einops import rearrange, repeat
 from transformers import CLIPTokenizer, CLIPTextModel, CLIPVisionModel, CLIPModel
 import kornia
 from ldm.modules.x_transformer import Encoder, \
-    TransformerWrapper  # TODO: can we directly rely on lucidrains code and simply add this as a reuirement? --> test
+    TransformerWrapper  # TODO: can we directly rely on lucidrains code and simply add this as a requirement? --> test
 from .xf import LayerNorm, Transformer
 import math
 
@@ -57,7 +57,7 @@ class BERTTokenizer(AbstractEncoder):
 
     def __init__(self, device="cuda", vq_interface=True, max_length=77):
         super().__init__()
-        from transformers import BertTokenizerFast  # TODO: add to reuquirements
+        from transformers import BertTokenizerFast  # TODO: add to requirements
         self.tokenizer = BertTokenizerFast.from_pretrained("bert-base-uncased")
         self.device = device
         self.vq_interface = vq_interface
@@ -81,7 +81,7 @@ class BERTTokenizer(AbstractEncoder):
 
 
 class BERTEmbedder(AbstractEncoder):
-    """Uses the BERT tokenizr model and add some transformer encoder layers"""
+    """Uses the BERT tokenizer model and add some transformer encoder layers"""
 
     def __init__(self, n_embed, n_layer, vocab_size=30522, max_seq_len=77,
                  device="cuda", use_tokenizer=True, embedding_dropout=0.0):
