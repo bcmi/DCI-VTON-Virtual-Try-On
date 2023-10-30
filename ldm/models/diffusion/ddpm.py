@@ -1437,7 +1437,7 @@ class LatentDiffusion(DDPM):
         return log
 
     def configure_optimizers(self):
-        lr = self.learrning_rate
+        lr = self.learning_rate
         params = list(self.model.parameters())
 
         if self.cond_stage_trainable:
