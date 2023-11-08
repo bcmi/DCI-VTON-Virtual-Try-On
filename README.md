@@ -127,10 +127,10 @@ sh train.sh
 Our code is heavily borrowed from [Paint-by-Example](https://github.com/Fantasy-Studio/Paint-by-Example). We also thank [PF-AFN](https://github.com/geyuying/PF-AFN), our warping module depends on it.
 ## Citation
 ```
-@article{gou2023taming,
+@inproceedings{gou2023taming,
   title={Taming the Power of Diffusion Models for High-Quality Virtual Try-On with Appearance Flow},
   author={Gou, Junhong and Sun, Siyu and Zhang, Jianfu and Si, Jianlou and Qian, Chen and Zhang, Liqing},
-  journal={arXiv preprint arXiv:2308.06101},
+  booktitle={Proceedings of the 31st ACM International Conference on Multimedia},
   year={2023}
 }
 ```
