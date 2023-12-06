@@ -4,6 +4,12 @@ This is the official repository for the following paper:
 >
 > Junhong Gou, Siyu Sun, Jianfu Zhang, Jianlou Si, Chen Qian, Liqing Zhang  
 > Accepted by **ACM MM 2023**.
+
+## News
+- *2023-12-06* We have updated the selection strategy of inpainting mask similar to VITON-HD and HR-VTON in `cp_dataset_v2.py`. The pretrained model based 
+on this new masking strategy is available from [Google Drive](https://drive.google.com/drive/folders/11BJo59iXVu2_NknKMbN0jKtFV06HTn5K?usp=sharing).
+
+
 ## Overview
 ![](assets/teaser.jpg)
 > **Abstract:**  
