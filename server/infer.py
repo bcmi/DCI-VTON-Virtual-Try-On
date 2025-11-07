@@ -7,7 +7,7 @@ def load_pipeline():
     """Load DCI-VTON or placeholder resources."""
     device = "cuda" if torch.cuda.is_available() else "cpu"
     pipe = {"device": device}
-    # You’ll later import your DCI-VTON modules here and load checkpoints.
+    # later import DCI-VTON modules here and load checkpoints.
     print(f"Pipeline initialized on {device}")
     return pipe
 
